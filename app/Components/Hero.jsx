@@ -1,14 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Typography, Box, Button } from "@mui/material";
-import { Play } from "lucide-react";
-import Image from "next/image";
-import child from "../assets/bgimg.png";
-import l1 from "../assets/1.png";
-import l2 from "../assets/2.png";
-import l3 from "../assets/3.png";
-import l4 from "../assets/4.png";
-import l5 from "../assets/5.png";
 
 const Hero = () => {
   const heading =
