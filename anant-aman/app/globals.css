@@ -39,7 +39,7 @@ body::-webkit-scrollbar-track {
 } 
 
 .bg-hero{
-  background-image: url('assets/BgImage.png') !important;
+  background-image: url(./assets/BgImage.webp) !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
