@@ -39,22 +39,28 @@ const Certifications = () => {
             <motion.div
               whileHover={{ scale: 1.1 }}  // Image zoom effect on hover
               transition={{ duration: 0.3 }}
+              className="w-full"
             >
               <Box
                 sx={{
-                  width: 120,
-                  height: 120,
+                  width: { lg:200 , md:150 , sm:120 , xs: 120 },
+                  height: { lg:200 , md:150 , sm:120 , xs: 120 },
                   borderRadius: "50%",
                   cursor: "pointer",
                   overflow: "hidden",
+                  display : "flex",
+                  justifyContent : 'center',
+                  alignItems : 'center'
                 }}
                 onClick={() => handleOpen(cert)}
               >
                 <Image
                   src={cert}
                   alt={`Certificate ${index + 1}`}
-                  width={120}
-                  height={120}
+                  sx={{
+                    width: { lg:200 , md:150 ,},
+                    height: { lg:200 , md:150 ,},
+                  }}
                   style={{ borderRadius: "50px" }}
                   priority
                 />

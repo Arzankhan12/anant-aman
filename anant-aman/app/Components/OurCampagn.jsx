@@ -12,7 +12,7 @@ const OurCampaign = () => {
       transition={{ duration: 1 }}
     >
       <motion.h1 
-        className="text-3xl md:text-4xl font-bold mb-8 text-slate-900"
+        className="text-3xl md:text-4xl font-semibold mb-8 text-slate-900"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2 }}
@@ -20,21 +20,21 @@ const OurCampaign = () => {
         Our Campaign
       </motion.h1>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-8">
         {[1, 2].map((item) => (
           <motion.div
             key={item}
-            className="bg-[#fcd34d] rounded-2xl p-6 md:p-8 flex justify-between items-center group cursor-pointer hover:shadow-lg transition-shadow"
+            className="bg-[#F2C94C] lg:py-[2.5rem] rounded-2xl p-6 md:p-8 flex justify-between items-center group cursor-pointer hover:shadow-lg transition-shadow"
             whileHover={{ scale: 1.05 }}
           >
-            <div>
+            <div className='lg:ml-[5rem] ml-[0]'>
               <motion.div 
-                className="text-sm font-medium mb-2 tracking-wide"
+                className="text-sm font-medium mb-2 tracking-wide flex items-center gap-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
               >
-                OUR CAMPAIGN
+                OUR CAMPAIGN <div className='w-[50px] h-[.1rem] bg-slate-900 rounded-full'></div>
               </motion.div>
               <motion.h2 
                 className="text-xl md:text-2xl font-bold"

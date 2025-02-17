@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
+import { FaPlay } from "react-icons/fa";  
 import Image from "next/image";
 import child from "../assets/bgimg.png";
 import l1 from "../assets/1.png";
@@ -22,8 +22,8 @@ const About = () => {
   ];
 
   return (
-    <div id="about" className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div className="grid lg:grid-cols-2 gap-8 items-center">
+    <div id="about" className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-[2rem]">
+      <div className="grid lg:grid-cols-2 gap-8 items-center w-[81%] mx-auto">
         {/* Left Content */}
         <motion.div
           className="space-y-6"
@@ -32,43 +32,42 @@ const About = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="flex items-center gap-4 ">
-            <div className="border-t-2 border-gray-200 w-12" />
-            <h2 className="text-sm text-gray-600 tracking-wider uppercase">
+          <div className="flex items-center gap-4 lg:ml-[-6rem] max-md:ml-[0] my-[2rem]">
+            <div className="border-t-2 border-black w-[5rem]" />
+            <h2 className="text-sm text-black font-bold tracking-wider uppercase">
               THE LIVES WE'VE TOUCHED
             </h2>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-bold text-blue-600">
+          <h1 className="text-4xl sm:text-5xl font-bold text-[#105A98] my-[2rem]">
             Real Stories of Transformation
           </h1>
-
+      
           <div className="space-y-6">
             <motion.blockquote
-              className="text-gray-600"
+              className="text-[#525560] flex mt-[2rem]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.7 }}
             >
-              "I didn't know if my family would survive another day without
+             <li></li> "I didn't know if my family would survive another day without
               food. Then Anant Aman's Babu Ki Rasoi came into our lives. Today,
               I have hope for tomorrow."
-              <footer className="mt-2 text-gray-500">— Sunita, Slum Resident</footer>
+              — Sunita, Slum Resident
             </motion.blockquote>
 
             <motion.blockquote
-              className="text-gray-600"
+              className="text-[#525560] flex my-[2rem]"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.7 }}
             >
-              "I was scared when I found a lump in my breast, but thanks to
+             <li></li> "I was scared when I found a lump in my breast, but thanks to
               Anant Aman's Cancer Awareness Drive, I got the support and
-              information I needed. Early detection saved my life."
-              <footer className="mt-2 text-gray-500">— Priya, Community Member</footer>
+              information I needed. Early detection saved my life." — Priya, Community Member
             </motion.blockquote>
 
             <motion.button
-              className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md transition-colors duration-200"
+              className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md transition-colors duration-200 "
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -99,18 +98,18 @@ const About = () => {
                   src={child}
                   alt="Children holding artwork"
                   width={500}
-                  height={300}
+                  height={400}
                   unoptimized={true}
-                  className="rounded-lg object-cover w-full h-full"
+                  className="rounded-2xl object-cover w-full h-full"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <motion.div
-                    className="bg-white rounded-full p-4 cursor-pointer hover:bg-gray-100 transition-colors duration-200"
+                    className="bg-white rounded-full p-4 cursor-pointer hover:bg-gray-100 transition-colors flex justify-center items-center duration-200"
                     onClick={() => setIsPlaying(true)}
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.9 }}
                   >
-                    <Play className="w-8 h-8 text-blue-600" />
+                    <FaPlay className="w-5 h-5"/>
                   </motion.div>
                 </div>
               </>

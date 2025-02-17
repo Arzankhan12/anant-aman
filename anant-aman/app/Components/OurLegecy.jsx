@@ -6,7 +6,7 @@ import suply from "../assets/suply.png";
 
 const MilestoneCard = ({ year, description, imageUrl }) => (
   <motion.div
-    className="relative group overflow-hidden rounded-lg cursor-pointer"
+    className="relative group overflow-hidden rounded-2xl cursor-pointer"
     initial={{ opacity: 0, scale: 0.9 }}
     whileInView={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.6, ease: "easeOut" }}
@@ -14,7 +14,7 @@ const MilestoneCard = ({ year, description, imageUrl }) => (
   >
     {/* Dark overlay that becomes more transparent on hover */}
     <motion.div
-      className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-all duration-300 z-10"
+      className="absolute inset-0 bg-black/60 group-hover:bg-black/30 transition-all duration-300 z-10"
       initial={{ opacity: 0.7 }}
       whileHover={{ opacity: 0.4 }}
       transition={{ duration: 0.3 }}
@@ -31,10 +31,10 @@ const MilestoneCard = ({ year, description, imageUrl }) => (
     </div>
 
     {/* Content */}
-    <div className="absolute inset-0 z-20 p-6 flex flex-col justify-between">
+    <div className="absolute inset-0 z-20 p-8 flex flex-col">
       {/* Year */}
       <motion.h3
-        className="text-white text-4xl font-bold"
+        className="text-white text-4xl font-bold text-[1.75rem]"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
@@ -50,9 +50,9 @@ const MilestoneCard = ({ year, description, imageUrl }) => (
         transition={{ duration: 0.5, delay: 0.4 }}
         viewport={{ once: true }}
       >
-        <p className="text-white text-lg mb-4">{description}</p>
+        <p className="text-white text-[1rem] mt-[.5rem]">{description}</p>
         <motion.button
-          className="bg-white text-black px-6 py-2 rounded-md hover:bg-gray-100 transition-colors duration-300"
+          className="bg-white text-black px-6 py-2 rounded-sm hover:bg-gray-200 transition-colors duration-300 mt-[12rem]"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -100,8 +100,8 @@ const OurLegecy = () => {
         viewport={{ once: true }}
       >
         <div className="flex items-center gap-4 mb-4">
-          <div className="h-0.5 w-12 bg-gray-400"></div>
-          <h2 className="uppercase tracking-wider text-sm font-semibold text-gray-600">
+          <div className="h-0.5 w-12 bg-black"></div>
+          <h2 className="uppercase tracking-wider text-sm font-semibold text-gray-900 font-medium">
             OUR LEGACY OF CHANGE
           </h2>
         </div>

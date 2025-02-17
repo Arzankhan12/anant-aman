@@ -59,11 +59,14 @@ function NavBar() {
           position="fixed"
           sx={{
             backgroundColor: scrolled
-              ? "rgba(255, 255, 255, 0.9)"
-              : "transparent",
+              ? "rgba(255, 255, 255, 1)"
+              : "rgba(255, 255, 255, 1)",
             boxShadow: scrolled ? 1 : 0,
             transition: "background-color 0.3s ease",
-            paddingX: 2,
+            display:'flex',
+            justifyContent:'center',
+            height:'87px',
+            paddingX: {lg:9 , sm: 0},
           }}
         >
           <Toolbar
@@ -75,21 +78,8 @@ function NavBar() {
             }}
           >
             {/* Logo */}
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Image alt="logo" src={flogo} width={40} height={40} />
-              <Typography
-                variant="h5"
-                sx={{
-                  fontFamily: "monospace",
-                  fontWeight: 400,
-                  letterSpacing: ".1rem",
-                  color: scrolled ? "black" : "white", // Text color change on scroll
-                  textDecoration: "none",
-                  ml: 1,
-                }}
-              >
-                ANANTAMAN
-              </Typography>
+            <Box sx={{ display: "flex", alignItems: "center"}}>
+              <Image alt="logo" src={flogo} width={200} height={200} className="object-cover" />
             </Box>
 
             {/* Desktop Navigation */}
@@ -106,7 +96,7 @@ function NavBar() {
                   <Button
                     sx={{
                       my: 2,
-                      color: scrolled ? "black" : "white", // Text color change on scroll
+                      color: scrolled ? "black" : "black", // Text color change on scroll
                       display: "block",
                       "&:hover": { color: "primary.main" },
                     }}
@@ -135,7 +125,7 @@ function NavBar() {
                 size="large"
                 onClick={toggleSidebar}
                 sx={{
-                  color: scrolled ? "black" : "white", // Hamburger icon color change on scroll
+                  color: scrolled ? "black" : "black", // Hamburger icon color change on scroll
                 }}
               >
                 <MenuIcon />

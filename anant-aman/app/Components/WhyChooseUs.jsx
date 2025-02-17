@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Line from "../assets/Line.png";
+import Image from "next/image";
 import vector from "../assets/Vector.png";
 import vector1 from "../assets/Vector1.png";
 import vector2 from "../assets/Vector2.png";
@@ -10,7 +11,7 @@ import suply from "../assets/suply.png";
 
 const ImpactCard = ({ icon, title, description }) => (
   <div className="flex gap-4 mb-6">
-    <div className="flex-shrink-0 w-8 h-8 text-green-500">
+    <div className="flex-shrink-0 w-8 h-8 text-green-500 ml-[2rem]">
       <Image
         src={icon}
         alt={title}
@@ -21,7 +22,7 @@ const ImpactCard = ({ icon, title, description }) => (
     </div>
     <div>
       <h3 className="text-white text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-gray-300 text-sm">{description}</p>
+      <p className="text-gray-300 text-sm text-base/6">{description}</p>
     </div>
   </div>
 );
@@ -29,7 +30,7 @@ const ImpactCard = ({ icon, title, description }) => (
 const WhyChooseUs = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-   const slides = [
+  const slides = [
     {
       image: suply,
       title: "Impact 1",
@@ -44,7 +45,6 @@ const WhyChooseUs = () => {
     },
   ];
 
-
   const handlePrevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
@@ -57,47 +57,51 @@ const WhyChooseUs = () => {
     {
       icon: vector,
       title: "Babu Ki Rasoi",
-      description: "Feeding thousands in slum areas with dignity and care."
+      description: "Feeding thousands in slum areas with dignity and care.",
     },
     {
       icon: vector1,
       title: "Cancer Awareness Drives",
-      description: "Educating communities and supporting early detection."
+      description: "Educating communities and supporting early detection.",
     },
     {
       icon: vector2,
       title: "Educational Projects",
-      description: "Bringing light to orphanages and underprivileged children through innovative teaching techniques."
+      description:
+        "Bringing light to orphanages and underprivileged children through innovative teaching techniques.",
     },
     {
       icon: vector3,
       title: "Therapy",
-      description: "Therapy is a guided process of healing and self-improvement that helps individuals manage emotions, behaviors, and mental health challenges."
-    }
+      description:
+        "Therapy is a guided process of healing and self-improvement that helps individuals manage emotions, behaviors, and mental health challenges.",
+    },
   ];
 
   return (
-    <section id='why-choose-us' className="bg-[#1a237e] min-h-screen">
+    <section id="why-choose-us" className="bg-[#1a237e] min-h-screen">
       <div className="container mx-auto py-16 px-12 max-md:px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div>
-            <div className="flex items-center gap-4 mb-8">
+          <div className="lg:w-[80%] ml-[20%] max-md:ml-[0] max-md:w-[w-100%]">
+            <div className="flex items-center gap-4 mb-8 ml-[-13%] max-md:ml-[0]">
               <div className="h-0.5 w-12 bg-white"></div>
               <h2 className="text-white uppercase tracking-wider text-sm font-semibold">
                 WHY CHOOSE US
               </h2>
-              
+
               <div className="flex items-center gap-2">
-                <button 
+                <button
                   onClick={handlePrevSlide}
                   className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-gray-200 transition-colors"
                   aria-label="Previous slide"
                 >
                   <ChevronLeft className="w-6 h-6 text-blue-900" />
                 </button>
-                <span className="text-white text-2xl font-bold">{currentSlide + 1}</span>
-                <button 
+                <span className="text-white text-2xl font-bold">
+                  {currentSlide + 1}
+                </span>
+                <button
                   onClick={handleNextSlide}
                   className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-gray-200 transition-colors"
                   aria-label="Next slide"
@@ -111,12 +115,14 @@ const WhyChooseUs = () => {
               Our Proven Impact
             </h1>
             <p className="text-gray-300 mb-12">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-6 relative">
+              <Image src={Line} alt="line" className="absolute h-[100%] left-0 " />
               {impacts.map((impact, index) => (
-                <ImpactCard 
+                <ImpactCard
                   key={index}
                   icon={impact.icon}
                   title={impact.title}
@@ -128,39 +134,35 @@ const WhyChooseUs = () => {
 
           {/* Right Image Slider */}
           <div className="relative rounded-lg overflow-hidden">
-            <div className="relative w-full aspect-square overflow-hidden">
-                <div className="whychooseus-slide-css w-[65%] h-[100%] max-md:w-[100%] max-md: lg:ml-[5.3rem] max-md:ml-0">
-            <div className="blue-border"></div>
-            <div className="yellow-border"></div>
-              {/* Background decorative elements */}
-              
-              {/* Image slider */}
-              <div className="relative w-full h-full rounded-lg overflow-hidden">
-                <div 
-                  className="flex transition-transform duration-500 ease-in-out h-full"
-                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                >
-                  {slides.map((slide, index) => (
-                    <div 
-                      key={index} 
-                      className="flex-shrink-0 w-full h-full"
-                    >
-                      <Image
-                        src={slide.image}
-                        alt={slide.title}
-                        width={600}
-                        height={600}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
+            <div className="relative w-full aspect-square overflow-hidden flex justify-center items-center">
+              <div className="whychooseus-slide-css w-[65%] h-[100%] max-md:w-[100%] lg:ml-[5.3rem] max-md:ml-0">
+                <div className="blue-border"></div>
+                <div className="yellow-border"></div>
+                {/* Background decorative elements */}
+
+                {/* Image slider */}
+                <div className="relative w-full h-full rounded-lg overflow-hidden">
+                  <div
+                    className="flex transition-transform duration-500 ease-in-out h-full"
+                    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                  >
+                    {slides.map((slide, index) => (
+                      <div key={index} className="flex-shrink-0 w-full h-full">
+                        <Image
+                          src={slide.image}
+                          alt={slide.title}
+                          width={600}
+                          height={600}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Pagination dots */}
-           
-          </div>
+              {/* Pagination dots */}
+            </div>
           </div>
         </div>
       </div>

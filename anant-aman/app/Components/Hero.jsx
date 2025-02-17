@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Typography, Box, Button } from "@mui/material";
+import { Typography, Box } from "@mui/material";
+import { FaPlayCircle } from "react-icons/fa";
 
 const Hero = () => {
   const heading =
@@ -11,13 +12,13 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="h-[100dvh] bg-hero flex items-center"
+      className="h-[110dvh] mt-[5rem] bg-hero flex items-center"
       id="hero"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <Box className="px-[2vw] max-sm:px-[5vw] w-[100%] ">
+      <Box className="px-[2vw] max-sm:px-[5vw] w-[100%] px-[6.7rem] max-md:px-[1rem]">
         <motion.div initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }}>
           <Typography
             variant="h1"
@@ -28,12 +29,12 @@ const Hero = () => {
           <Typography
             component="p"
             variant="subtitle1"
-            sx={{ color: "white", fontSize: { md: "1rem", xs: "1rem" }, my: 2, width: { lg: "60%", sm: "100%", md: "100%" } }}
+            sx={{ color: "white", fontSize: { md: "1.5rem", xs: "1rem" }, my: 2, width: { lg: "80%", sm: "100%", md: "100%" } ,lineHeight : '28.13px', mb:'4rem' , fontWeight:'500', my:'2rem'}} 
           >
             {para_hero}
           </Typography>
         </motion.div>
-        <Box sx={{ display: "flex", justifyContent: { lg: "left", md: "left", sm: "left" }, alignItems: "center", gap: 2, my: 5 }}>
+        <Box sx={{ display: "flex", justifyContent: { lg: "left", md: "left", sm: "left" }, alignItems: "center", gap: 2, my: 8 }}>
           <motion.button
             className="bg-white text-black px-6 py-3 rounded-md"
             whileHover={{ scale: 1.1 }}
@@ -41,15 +42,16 @@ const Hero = () => {
             What we do
           </motion.button>
           <motion.button
-            className="text-white border border-white px-6 py-3 rounded-md"
+            className="text-white px-6 py-3 rounded-md flex justify-center items-center gap-2"
             whileHover={{ scale: 1.1 }}
           >
+            <FaPlayCircle className="w-5 h-5"/>
             Play Video
           </motion.button>
         </Box>
-        <motion.div className="flex justify-left items-center h-auto gap-2 " initial={{ width: "0%" }} animate={{ width: "80%" }} transition={{ duration: 1 }}>
+        <motion.div className="flex justify-left items-center h-auto gap-2 mt-[8.8rem]" initial={{ width: "0%" }} animate={{ width: "80%" }} transition={{ duration: 1 }}>
           <p className="text-white">{priscrib}</p>
-          <div className="w-[80%] bg-white h-[2px] flex-1" />
+          <div className="w-[100%] bg-white h-[1px] flex-1" />
         </motion.div>
       </Box>
     </motion.div>
