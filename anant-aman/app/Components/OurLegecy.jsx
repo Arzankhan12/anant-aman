@@ -99,7 +99,7 @@ const OurLegecy = () => {
         transition={{ duration: 0.8, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        <div className="flex items-center gap-4 mb-4">
+        <div className="flex items-center gap-4 mb-4 ml-[-5rem] max-md:ml-0">
           <div className="h-0.5 w-12 bg-black"></div>
           <h2 className="uppercase tracking-wider text-sm font-semibold text-gray-900 font-medium">
             OUR LEGACY OF CHANGE

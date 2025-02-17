@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 import Line from "../assets/Line.png";
 import Image from "next/image";
 import vector from "../assets/Vector.png";
@@ -90,23 +90,23 @@ const WhyChooseUs = () => {
                 WHY CHOOSE US
               </h2>
 
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
                 <button
                   onClick={handlePrevSlide}
-                  className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-gray-200 transition-colors"
+                  className="w-[3.5rem] h-[3.5rem] text-center rounded-full bg-white flex items-center justify-center hover:bg-gray-200 transition-colors"
                   aria-label="Previous slide"
                 >
-                  <ChevronLeft className="w-6 h-6 text-blue-900" />
+                  <ArrowLeft className="w-6 h-6 text-black" />
                 </button>
-                <span className="text-white text-2xl font-bold">
+                <span className="text-white text-4xl font-bold">
                   {currentSlide + 1}
                 </span>
                 <button
                   onClick={handleNextSlide}
-                  className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-gray-200 transition-colors"
+                  className="w-[3.5rem] h-[3.5rem] text-center rounded-full bg-white flex items-center justify-center hover:bg-gray-200 transition-colors"
                   aria-label="Next slide"
                 >
-                  <ChevronRight className="w-6 h-6 text-blue-900" />
+                  <ArrowRight  className="w-6 h-6 text-black" />
                 </button>
               </div>
             </div>
