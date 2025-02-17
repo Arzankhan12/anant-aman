@@ -23,12 +23,10 @@ import Image from "next/image";
 import JoinUsForm from "./JoinUsForm";
 
 const pages = [
+  { name: "Home", id: "hero" },
   { name: "About", id: "about" },
-  { name: "Certifications", id: "certifications" },
-  { name: "Our Campaign", id: "our-campaign" },
-  { name: "Our Legacy", id: "our-legacy" },
-  { name: "Promise", id: "promise" },
-  { name: "Why Choose Us", id: "why-choose-us" },
+  { name: "What We Do", id: "our-legacy" },
+  { name: "Contact", id: "promise" },
 ];
 
 function NavBar() {
