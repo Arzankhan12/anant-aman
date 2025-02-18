@@ -40,10 +40,6 @@ body::-webkit-scrollbar-track {
 } 
 
 .bg-hero{
-  background-image: url('../app/assets/suply.png') !important;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
