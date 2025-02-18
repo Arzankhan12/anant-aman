@@ -40,7 +40,7 @@ body::-webkit-scrollbar-track {
 } 
 
 .bg-hero{
-  background-image: url(../public/bg.png) !important;
+  background-image: url('https://images.lifestyleasia.com/wp-content/uploads/sites/7/2022/08/10173622/untitled-design-2022-08-10t101208-322.jpeg') !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
