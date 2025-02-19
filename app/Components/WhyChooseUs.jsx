@@ -135,7 +135,7 @@ const WhyChooseUs = () => {
           {/* Right Image Slider */}
           <div className="relative rounded-lg overflow-hidden">
             <div className="relative w-full aspect-square overflow-hidden flex justify-center items-center">
-              <div className="whychooseus-slide-css w-[65%] h-[100%] max-md:w-[100%] lg:ml-[5.3rem] max-md:ml-0">
+              <div className="whychooseus-slide-css w-[55%] h-[80%] max-md:w-[100%] lg:ml-[5.3rem] max-md:ml-0">
                 <div className="blue-border"></div>
                 <div className="yellow-border"></div>
                 {/* Background decorative elements */}

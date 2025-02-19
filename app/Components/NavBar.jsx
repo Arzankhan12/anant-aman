@@ -25,7 +25,8 @@ import JoinUsForm from "./JoinUsForm";
 const pages = [
   { name: "Home", id: "hero" },
   { name: "About", id: "about" },
-  { name: "What We Do", id: "our-legacy" },
+  { name: "What we do", id: "our-legacy" },
+  { name: "Media", id: "why-choose-us" },
   { name: "Contact", id: "promise" },
 ];
 
@@ -61,10 +62,10 @@ function NavBar() {
               : "rgba(255, 255, 255, 1)",
             boxShadow: scrolled ? 1 : 0,
             transition: "background-color 0.3s ease",
-            display:'flex',
-            justifyContent:'center',
-            height:'87px',
-            paddingX: {lg:9 , sm: 0},
+            display: "flex",
+            justifyContent: "center",
+            height: "87px",
+            paddingX: { lg: 9, sm: 0 },
           }}
         >
           <Toolbar
@@ -76,12 +77,18 @@ function NavBar() {
             }}
           >
             {/* Logo */}
-            <Box sx={{ display: "flex", alignItems: "center"}}>
-              <Image alt="logo" src={flogo} width={200} height={200} className="object-cover" />
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+              <Image
+                alt="logo"
+                src={flogo}
+                width={200}
+                height={200}
+                className="object-cover"
+              />
             </Box>
 
             {/* Desktop Navigation */}
-            <Box sx={{ display: { xs: "none", md: "flex" } }}>
+            <Box sx={{ display: { xs: "none", md: "flex" },gap:"1.5rem" }}>
               {pages.map((page) => (
                 <Link
                   key={page.id}
@@ -97,6 +104,8 @@ function NavBar() {
                       color: scrolled ? "black" : "black", // Text color change on scroll
                       display: "block",
                       "&:hover": { color: "primary.main" },
+                      textTransform: "initial",
+                      fontSize:'1rem'
                     }}
                   >
                     {page.name}
@@ -161,7 +170,7 @@ function NavBar() {
             {/* Sidebar Content */}
             <List>
               {pages.map((page) => (
-                <ListItem key={page.id} disablePadding>
+                <ListItem key={page.id} sx={{ textTransform: "none" }} disablePadding>
                   <Link
                     to={page.id}
                     smooth={true}
