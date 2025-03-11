@@ -23,11 +23,11 @@ import Image from "next/image";
 import JoinUsForm from "./JoinUsForm";
 
 const pages = [
-  { name: "Home", id: "hero" },
-  { name: "About", id: "about" },
-  { name: "What we do", id: "our-legacy" },
-  { name: "Media", id: "why-choose-us" },
-  { name: "Contact", id: "promise" },
+  // { name: "Home", id: "hero" },
+  // { name: "About", id: "about" },
+  // { name: "What we do", id: "our-legacy" },
+  // { name: "Media", id: "why-choose-us" },
+  // { name: "Contact", id: "promise" },
 ];
 
 function NavBar() {
@@ -58,13 +58,12 @@ function NavBar() {
           position="fixed"
           sx={{
             backgroundColor: scrolled
-              ? "rgba(255, 255, 255, 1)"
-              : "rgba(255, 255, 255, 1)",
-            boxShadow: scrolled ? 1 : 0,
+              ? "transparent"
+              : "transparent",
+            boxShadow: scrolled ? 0 : 0,
             transition: "background-color 0.3s ease",
             display: "flex",
             justifyContent: "center",
-            height: "87px",
             paddingX: { lg: 9, sm: 0 },
           }}
         >
@@ -132,7 +131,7 @@ function NavBar() {
                 size="large"
                 onClick={toggleSidebar}
                 sx={{
-                  color: scrolled ? "black" : "black", // Hamburger icon color change on scroll
+                  color: scrolled ? "black" : "white", // Hamburger icon color change on scroll
                 }}
               >
                 <MenuIcon />

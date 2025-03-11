@@ -8,10 +8,17 @@ import vector1 from "../assets/Vector1.png";
 import vector2 from "../assets/Vector2.png";
 import vector3 from "../assets/Vector3.png";
 import suply from "../assets/suply.png";
+import suply1 from "../assets/babu.jpg";
+import suply2 from "../assets/cancer.jpg";
+import suply3 from "../assets/thripy.jpg";
 
-const ImpactCard = ({ icon, title, description }) => (
-  <div className="flex gap-4 mb-6">
-    <div className="flex-shrink-0 w-8 h-8 text-green-500 ml-[2rem]">
+const ImpactCard = ({ icon, title, description, isActive }) => (
+  <div
+    className={`flex gap-4 mb-6 p-3 rounded-lg transition-all duration-300 ${
+      isActive ? "bg-transperent text-[#FBBF24] scale-105" : "text-gray-300"
+    }`}
+  >
+    <div className="flex-shrink-0 w-8 h-8 ml-[2rem]">
       <Image
         src={icon}
         alt={title}
@@ -21,8 +28,12 @@ const ImpactCard = ({ icon, title, description }) => (
       />
     </div>
     <div>
-      <h3 className="text-white text-lg font-semibold mb-2">{title}</h3>
-      <p className="text-gray-300 text-sm text-base/6">{description}</p>
+      <h3 className={`text-lg font-semibold mb-2 ${isActive ? "text-[#FBBF24] font-bold" : "text-white"}`}>
+        {title}
+      </h3>
+      <p className={`text-sm ${isActive ? "text-[#FBBF24] font-bold" : "text-gray-300"}`}>
+        {description}
+      </p>
     </div>
   </div>
 );
@@ -32,15 +43,19 @@ const WhyChooseUs = () => {
 
   const slides = [
     {
-      image: suply,
+      image: suply1,
       title: "Impact 1",
     },
     {
-      image: suply,
+      image: suply2,
       title: "Impact 2",
     },
     {
       image: suply,
+      title: "Impact 3",
+    },
+    {
+      image: suply3,
       title: "Impact 3",
     },
   ];
@@ -106,7 +121,7 @@ const WhyChooseUs = () => {
                   className="w-[3.5rem] h-[3.5rem] text-center rounded-full bg-white flex items-center justify-center hover:bg-gray-200 transition-colors"
                   aria-label="Next slide"
                 >
-                  <ArrowRight  className="w-6 h-6 text-black" />
+                  <ArrowRight className="w-6 h-6 text-black" />
                 </button>
               </div>
             </div>
@@ -120,13 +135,18 @@ const WhyChooseUs = () => {
             </p>
 
             <div className="space-y-6 relative">
-              <Image src={Line} alt="line" className="absolute h-[100%] left-0 " />
+              <Image
+                src={Line}
+                alt="line"
+                className="absolute h-[100%] left-0 "
+              />
               {impacts.map((impact, index) => (
                 <ImpactCard
                   key={index}
                   icon={impact.icon}
                   title={impact.title}
                   description={impact.description}
+                  isActive={index === currentSlide} // Highlight when active
                 />
               ))}
             </div>

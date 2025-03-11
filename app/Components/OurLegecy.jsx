@@ -3,6 +3,8 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import suply from "../assets/suply.png";
+import suply1 from "../assets/thripy.jpg";
+import suply2 from "../assets/health.jpg";
 
 const MilestoneCard = ({ year, description, imageUrl }) => (
   <motion.div
@@ -52,7 +54,7 @@ const MilestoneCard = ({ year, description, imageUrl }) => (
       >
         <p className="text-white text-[1rem] mt-[.5rem]">{description}</p>
         <motion.button
-          className="bg-white text-black px-6 py-2 rounded-sm hover:bg-gray-200 transition-colors duration-300 mt-[12rem]"
+          className="bg-white text-black px-6 py-2 rounded-sm hover:bg-gray-200 transition-colors duration-300 absolute bottom-8"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -66,19 +68,19 @@ const MilestoneCard = ({ year, description, imageUrl }) => (
 const OurLegecy = () => {
   const milestones = [
     {
-      year: "2012",
-      description: "Anant Aman Social Welfare Society was founded.",
+      year: "BABU KI RASOI",
+      description: "50,000+ meals served across multiple communities",
       imageUrl: suply,
     },
     {
-      year: "2015",
-      description: "Launched Babu Ki Rasoi, serving 50,000+ meals.",
-      imageUrl: suply,
+      year: "HEALTH AWARENESS",
+      description: "10,000+ families reached with awareness campaigns. ",
+      imageUrl: suply1,
     },
     {
-      year: "2018",
-      description: "Organized the first Cancer Awareness Drive, impacting 10,000+ people.",
-      imageUrl: suply,
+      year: "EDUCATIONAL UPLIFT",
+      description: "5,000+ students annually supported through school supplies and mentoring..",
+      imageUrl: suply2,
     },
   ];
 

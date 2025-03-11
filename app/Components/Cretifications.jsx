@@ -4,14 +4,14 @@ import { Modal, Box, Typography, Grid, IconButton } from "@mui/material";
 import { motion } from "framer-motion";
 import CloseIcon from "@mui/icons-material/Close";
 import Image from "next/image";
-import ig from "../assets/bgimg.png";
+import certificate2 from "../assets/certificate2.png";
+import certificate1 from "../assets/certificate1.png";
+import certificate3 from "../assets/certificate3.jpg";
 
 const certifications = [
-  ig,
-  ig,
-  ig,
-  ig,
-  ig,
+  certificate2,
+  certificate1,
+  certificate3
 ];
 
 const Certifications = () => {
@@ -43,25 +43,28 @@ const Certifications = () => {
             >
               <Box
                 sx={{
-                  width: { lg:200 , md:150 , sm:120 , xs: 120 },
-                  height: { lg:200 , md:150 , sm:120 , xs: 120 },
-                  borderRadius: "50%",
+                  width: { lg:300 , md:250 , sm:140 , xs: 120 },
+                  height: { lg:400 , md:350 , sm:240 , xs: 160 },
+                  borderRadius: "0%",
                   cursor: "pointer",
                   overflow: "hidden",
                   display : "flex",
+                  bgcolor : "white",
                   justifyContent : 'center',
+                  objectFit : 'cover',
                   alignItems : 'center'
                 }}
                 onClick={() => handleOpen(cert)}
-              >
+                >
                 <Image
                   src={cert}
                   alt={`Certificate ${index + 1}`}
                   sx={{
-                    width: { lg:200 , md:150 ,},
-                    height: { lg:200 , md:150 ,},
+                    objectFit : 'cover',
+                    width: { lg:300 , md:250 ,},
+                    height: { lg:400 , md:350 ,},
                   }}
-                  style={{ borderRadius: "50px" }}
+                  style={{ borderRadius: "0%" }}
                   priority
                 />
               </Box>
@@ -84,7 +87,7 @@ const Certifications = () => {
             bgcolor: "white",
             boxShadow: 24,
             p: 2,
-            borderRadius: 2,
+            borderRadius: 0,
             maxWidth: "90%", // For responsive modal width
             maxHeight: "80vh", // For responsive modal height
           }}

@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import suply from '../assets/suply.png';
+import suply from '../assets/food.jpg';
 
 const Promise = () => {
   return (

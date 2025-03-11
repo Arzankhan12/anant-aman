@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="h-[110dvh] mt-[5rem] relative overflow-hidden flex items-center"
+      className="h-[110dvh] relative overflow-hidden flex items-center"
       id="hero"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -75,16 +75,17 @@ const Hero = () => {
           <motion.button
             className="bg-white text-black px-6 py-3 rounded-md"
             whileHover={{ scale: 1.1 }}
+            onClick={() => window.open('https://drive.google.com/file/d/1x5oQz8nDRV8QaaUCL3SW59NRgauwzZ8E/view?usp=sharing ', '_blank', 'noopener,noreferrer')}
           >
             What we do
           </motion.button>
-          <motion.button
+          {/* <motion.button
             className="text-white px-6 py-3 rounded-md flex justify-center items-center gap-2"
             whileHover={{ scale: 1.1 }}
           >
             <FaPlayCircle className="w-5 h-5" />
             Play Video
-          </motion.button>
+          </motion.button> */}
         </Box>
         <motion.div
           className="flex justify-left items-center h-auto gap-2 mt-[8.8rem]"
