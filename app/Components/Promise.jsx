@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import suply from '../assets/food.jpg';
+import Foodsuply from '../assets/food.jpg';
+import promiseImg from '../assets/education.jpg';
 
 const Promise = () => {
   return (
@@ -55,7 +56,7 @@ const Promise = () => {
             >
               <div className="rounded-xl overflow-hidden h-[300px] md:h-[400px] w-full">
                 <Image 
-                  src={suply}
+                  src={promiseImg}
                   alt="Community celebration"
                   className="w-full h-full object-cover"
                 />
@@ -77,7 +78,7 @@ const Promise = () => {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src={suply}
+            src={Foodsuply}
             alt="Happy children"
             className="w-full h-full object-cover rounded-2xl"
           />

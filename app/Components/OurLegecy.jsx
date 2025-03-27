@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import suply from "../assets/suply.png";
 import suply1 from "../assets/thripy.jpg";
-import suply2 from "../assets/health.jpg";
+import education from "../assets/education1.jpg";
 
 const MilestoneCard = ({ year, description, imageUrl }) => (
   <motion.div
@@ -80,7 +80,7 @@ const OurLegecy = () => {
     {
       year: "EDUCATIONAL UPLIFT",
       description: "5,000+ students annually supported through school supplies and mentoring..",
-      imageUrl: suply2,
+      imageUrl: education,
     },
   ];
 

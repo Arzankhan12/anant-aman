@@ -7,7 +7,7 @@ import vector from "../assets/Vector.png";
 import vector1 from "../assets/Vector1.png";
 import vector2 from "../assets/Vector2.png";
 import vector3 from "../assets/Vector3.png";
-import suply from "../assets/suply.png";
+import education from "../assets/education3.jpg";
 import suply1 from "../assets/babu.jpg";
 import suply2 from "../assets/cancer.jpg";
 import suply3 from "../assets/thripy.jpg";
@@ -51,7 +51,7 @@ const WhyChooseUs = () => {
       title: "Impact 2",
     },
     {
-      image: suply,
+      image: education,
       title: "Impact 3",
     },
     {
